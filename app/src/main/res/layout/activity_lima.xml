@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home.pertemuan_5.LimaActivity">
+    tools:context=".Home.WebView.LimaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -26,13 +26,11 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:padding="24dp"
+        android:padding="16dp"
         android:clipToPadding="false">
 
         <LinearLayout
@@ -41,7 +39,7 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <!-- Tambahkan konten panjang supaya bisa di-scroll -->
+            <!-- Tombol Web View tetap dipertahankan -->
             <Button
                 android:id="@+id/btnWebView"
                 android:layout_width="wrap_content"
@@ -49,110 +47,201 @@
                 android:backgroundTint="#28693D"
                 android:text="Web View"
                 app:icon="@drawable/ic_arrow_back"
-                app:iconGravity="top"></Button>
+                app:iconGravity="top"
+                android:layout_marginBottom="16dp" />
 
-            <TextView
+            <!-- Challenge 1 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌱 Bawa Botol Minum Sendiri"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gunakan tumbler pribadi hari ini dan hindari membeli air kemasan sekali pakai untuk mengurangi sampah plastik."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Challenge 2 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛍️ Belanja Tanpa Kantong Plastik"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bawa totebag atau tas belanja ramah lingkungan saat berbelanja di minimarket atau pasar."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Challenge 3 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💡 Hemat Energi Listrik"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Matikan lampu ruangan yang tidak digunakan dan cabut charger dari stopkontak setelah selesai digunakan."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Challenge 4 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🚲 Transportasi Ramah Lingkungan"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gunakan sepeda, jalan kaki, atau transportasi umum untuk perjalanan jarak dekat hari ini."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Challenge 5 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="♻️ Pemilahan Sampah Organik dan Anorganik"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pisahkan sampah sisa makanan dari sampah plastik/kertas di rumah Anda sebelum dibuang."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Challenge 6 -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍲 Habiskan Makanan Tanpa Sisa"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#28693D" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ambil porsi makanan secukupnya untuk mencegah *food waste* yang berpotensi menghasilkan gas metana di TPA."
+                        android:textSize="14sp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#555555" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

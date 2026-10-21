@@ -23,7 +23,7 @@ class WebViewActivity : AppCompatActivity() {
         }
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl("https://pcr.ac.id")
+        binding.webView.loadUrl("https://www.mit.edu/")
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {

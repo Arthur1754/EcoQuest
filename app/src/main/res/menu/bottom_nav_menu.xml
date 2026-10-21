@@ -6,10 +6,10 @@
         android:title="Home" />
     <item
         android:id="@+id/message"
-        android:icon="@drawable/ic_message"
-        android:title="Message" />
+        android:icon="@drawable/ic_task"
+        android:title="Challange" />
     <item
         android:id="@+id/more"
-        android:icon="@drawable/ic_more"
-        android:title="More" />
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
 </menu>

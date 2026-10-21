@@ -13,23 +13,22 @@ class MessageFragment : Fragment() {
     private var _binding: FragmentMessageBinding? = null
     private val binding get() = _binding!!
 
-    private val messageList = listOf(
-        MessageModel("Alya", "Halo! Apa kabar?", "https://api.dicebear.com/7.x/bottts/svg?seed=Alya"),
-        MessageModel("Budi", "Sudah makan?", "https://api.dicebear.com/7.x/bottts/svg?seed=Budi"),
-        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://api.dicebear.com/7.x/bottts/svg?seed=Citra"),
-        MessageModel("Dika", "Besok kita rapat jam 9", "https://api.dicebear.com/7.x/bottts/svg?seed=Dika"),
-        MessageModel("Eka", "Nice job kemarin!", "https://api.dicebear.com/7.x/bottts/svg?seed=Eka"),
-        MessageModel("Fajar", "Lagi ngapain?", "https://api.dicebear.com/7.x/bottts/svg?seed=Fajar"),
-        MessageModel("Gita", "Boleh minta tolong?", "https://api.dicebear.com/7.x/bottts/svg?seed=Gita"),
-        MessageModel("Hana", "Lihat email ya", "https://api.dicebear.com/7.x/bottts/svg?seed=Hana"),
-        MessageModel("Irfan", "Oke noted", "https://api.dicebear.com/7.x/bottts/svg?seed=Irfan"),
-        MessageModel("Joko", "Sampai jumpa besok", "https://api.dicebear.com/7.x/bottts/svg?seed=Joko")
+    // Mengganti isi data pesan dengan Challenge Lingkungan
+    private val challengeList = listOf(
+        MessageModel("🌱 Bawa Tumbler Sendiri", "Gunakan tempat minum pribadi hari ini.", "https://api.dicebear.com/7.x/bottts/svg?seed=Botol"),
+        MessageModel("🛍️ Belanja Tanpa Plastik", "Gunakan tas belanja ramah lingkungan.", "https://api.dicebear.com/7.x/bottts/svg?seed=Tas"),
+        MessageModel("💡 Hemat Energi Listrik", "Matikan lampu dan cabut charger tidak terpakai.", "https://api.dicebear.com/7.x/bottts/svg?seed=Lampu"),
+        MessageModel("🚲 Transportasi Hijau", "Jalan kaki, bersepeda, atau naik angkutan umum.", "https://api.dicebear.com/7.x/bottts/svg?seed=Sepeda"),
+        MessageModel("♻️ Pemilahan Sampah", "Pisahkan sampah organik dan anorganik di rumah.", "https://api.dicebear.com/7.x/bottts/svg?seed=Sampah"),
+        MessageModel("🍲 Habiskan Makanan", "Ambil porsi secukupnya dan hindari food waste.", "https://api.dicebear.com/7.x/bottts/svg?seed=Makanan"),
+        MessageModel("🪴 Siram & Tanam Pohon", "Beri perawatan pada tanaman di sekitarmu.", "https://api.dicebear.com/7.x/bottts/svg?seed=Pohon"),
+        MessageModel("📄 Hemat Kertas", "Gunakan dokumen digital untuk mencatat.", "https://api.dicebear.com/7.x/bottts/svg?seed=Kertas")
     )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentMessageBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -37,9 +36,14 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Message"
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Challenge"
 
-        val adapter = MessageAdapter(requireContext(), messageList)
+        val adapter = MessageAdapter(requireContext(), challengeList)
         binding.ListMessageItem.adapter = adapter
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

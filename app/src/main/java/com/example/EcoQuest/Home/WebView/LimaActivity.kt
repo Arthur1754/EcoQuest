@@ -26,8 +26,8 @@ class LimaActivity : AppCompatActivity() {
         }
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "About Us"
-            subtitle = "Ini subtitle"
+            title = "Daily Challanges"
+            subtitle = "Challanges"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
