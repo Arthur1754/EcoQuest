@@ -1,4 +1,4 @@
-package com.example.EcoQuest.Message
+package com.example.EcoQuest.Quest
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.example.EcoQuest.databinding.FragmentMessageBinding
+import com.example.EcoQuest.databinding.FragmentQuestBinding
 
-class MessageFragment : Fragment() {
+class Quest : Fragment() {
 
-    private var _binding: FragmentMessageBinding? = null
+    private var _binding: FragmentQuestBinding? = null
     private val binding get() = _binding!!
 
-    // Mengganti isi data pesan dengan Challenge Lingkungan
+    // Data Quest / Challenge Lingkungan
     private val challengeList = listOf(
         MessageModel("🌱 Bawa Tumbler Sendiri", "Gunakan tempat minum pribadi hari ini.", "https://api.dicebear.com/7.x/bottts/svg?seed=Botol"),
         MessageModel("🛍️ Belanja Tanpa Plastik", "Gunakan tas belanja ramah lingkungan.", "https://api.dicebear.com/7.x/bottts/svg?seed=Tas"),
@@ -29,16 +29,21 @@ class MessageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMessageBinding.inflate(inflater, container, false)
+        _binding = FragmentQuestBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Challenge"
 
-        val adapter = MessageAdapter(requireContext(), challengeList)
+        try {
+            (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+            (requireActivity() as AppCompatActivity).supportActionBar?.title = "Challenge"
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        val adapter = QuestAdapter(requireContext(), challengeList)
         binding.ListMessageItem.adapter = adapter
     }
 

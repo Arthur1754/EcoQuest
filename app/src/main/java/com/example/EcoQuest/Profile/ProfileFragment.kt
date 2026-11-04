@@ -1,4 +1,4 @@
-package com.example.EcoQuest.More
+package com.example.EcoQuest.Profile
 
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
@@ -6,19 +6,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.EcoQuest.LoginActivity
-import com.example.EcoQuest.R
-import com.example.EcoQuest.databinding.FragmentMoreBinding
+import com.example.EcoQuest.LoginActivity // Perbaikan import LoginActivity
+import com.example.EcoQuest.databinding.FragmentProfileBinding // Pastikan binding ini yang diimport
 
-class MoreFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private var _binding: FragmentMoreBinding? = null
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     private val accountDataList = listOf(
@@ -31,17 +29,21 @@ class MoreFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMoreBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Settings"
+        try {
+            (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+            (requireActivity() as AppCompatActivity).supportActionBar?.title = "Profile"
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
-        // Setup Adapter
+        // Setup Adapter untuk daftar akun
         val adapter = SimpleAdapter(
             requireContext(),
             accountDataList,

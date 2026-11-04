@@ -1,4 +1,4 @@
-package com.example.EcoQuest
+package com.example.EcoQuest.Profile
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,9 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.EcoQuest.Home.HomeFragment
-import com.example.EcoQuest.Message.MessageFragment
-import com.example.EcoQuest.More.MoreFragment
+
+import com.example.EcoQuest.R
+import com.example.EcoQuest.Home.Home
+import com.example.EcoQuest.Quest.Quest
+import com.example.EcoQuest.Home.Fragment.Reward
+import com.example.EcoQuest.Home.Fragment.Profile
+
 import com.example.EcoQuest.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -18,28 +22,33 @@ class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding= ActivityBaseBinding.inflate(layoutInflater)
+        binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0) // bottom = 0
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
 
-        replaceFragment(HomeFragment())
+        // Tampilan awal saat aplikasi dibuka memanggil class Home()
+        replaceFragment(Home())
 
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> {
-                    replaceFragment(HomeFragment())
+                R.id.nav_home -> {
+                    replaceFragment(Home())
                     true
                 }
-                R.id.message -> {
-                    replaceFragment(MessageFragment())
+                R.id.nav_quest -> {
+                    replaceFragment(Quest())
                     true
                 }
-                R.id.more -> {
-                    replaceFragment(MoreFragment())
+                R.id.nav_reward -> {
+                    replaceFragment(Reward())
+                    true
+                }
+                R.id.nav_profile -> {
+                    replaceFragment(Profile())
                     true
                 }
                 else -> false
@@ -50,8 +59,6 @@ class BaseActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
-        // .addToBackStack(null) sengaja dinonaktifkan: saat back langsung keluar aplikasi
             .commit()
     }
-
 }

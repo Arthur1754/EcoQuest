@@ -1,4 +1,4 @@
-package com.example.EcoQuest
+package com.example.EcoQuest.Profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.EcoQuest.databinding.ActivityLoginBinding
+import com.example.EcoQuest.R
 
 
 class LoginActivity : AppCompatActivity() {

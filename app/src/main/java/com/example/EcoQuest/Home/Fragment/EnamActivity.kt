@@ -30,13 +30,13 @@ class EnamActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
         binding.btnFrag1.setOnClickListener {
-            replaceFragment(SatuFragment())
+            replaceFragment(Reward())
         }
         binding.btnFrag2.setOnClickListener {
             replaceFragment(DuaFragment())
         }
         binding.btnFrag3.setOnClickListener {
-            replaceFragment(TigaFragment())
+            replaceFragment(Profile())
         }
     }
     private fun replaceFragment(fragment: Fragment, addToBackStack: Boolean = true) {

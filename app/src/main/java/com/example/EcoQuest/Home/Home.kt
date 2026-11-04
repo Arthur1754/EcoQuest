@@ -13,7 +13,7 @@ import com.example.EcoQuest.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
-class HomeFragment : Fragment() {
+class Home : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
 
         binding.btnSnackBar.setOnClickListener {
             Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
-                .setAction("Tampilkan") {
+                .setAction("Tutup") {
                     Log.e("Info Snackbar", "Snackbar ditutup")
                 }
                 .show()

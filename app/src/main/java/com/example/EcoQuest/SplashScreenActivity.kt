@@ -1,5 +1,4 @@
-package com.example.EcoQuest
-
+package com.example.EcoQuest.Profile
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
