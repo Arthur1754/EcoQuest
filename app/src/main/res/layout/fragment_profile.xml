@@ -30,11 +30,18 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp" />
 
+    <ListView
+        android:id="@+id/listViewItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:backgroundTint="#BA2929"
         android:text="Logout"
         android:textColor="@color/white" />

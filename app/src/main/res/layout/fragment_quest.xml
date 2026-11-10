@@ -15,34 +15,11 @@
         android:textColor="@color/colorPrimary"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Contoh List Misi -->
-    <TextView
+    <ListView
+        android:id="@+id/ListMessageItem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/bg_card_green"
-        android:text="🗑️ Take Trash\nReward: +10 Points"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/bg_card_green"
-        android:text="🥤 Use Tumbler\nReward: +5 Points"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/bg_card_green"
-        android:text="💡 Energy Saving\nReward: +5 Points"
-        android:textSize="16sp"
-        android:textColor="@color/black"/>
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="8dp" />
 
 </LinearLayout>

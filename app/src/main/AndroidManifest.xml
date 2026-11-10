@@ -14,9 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Athia_24TIC" >
 
-        <!-- Diperbarui karena berada di dalam package More -->
         <activity
-            android:name=".Profile.SplashScreenActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
@@ -41,13 +40,12 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Diperbarui karena berada di dalam package More -->
         <activity
-            android:name=".Profile.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Profile.BaseActivity"
+            android:name=".BaseActivity"
             android:exported="false"
             android:theme="@style/Theme.Athia_24TIC"
             android:windowSoftInputMode="adjustResize" />

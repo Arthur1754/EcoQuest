@@ -9,10 +9,9 @@ import android.view.ViewGroup
 import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.EcoQuest.LoginActivity // Perbaikan import LoginActivity
-import com.example.EcoQuest.databinding.FragmentProfileBinding // Pastikan binding ini yang diimport
+import com.example.EcoQuest.LoginActivity
+import com.example.EcoQuest.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
 
@@ -36,14 +35,6 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        try {
-            (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-            (requireActivity() as AppCompatActivity).supportActionBar?.title = "Profile"
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        // Setup Adapter untuk daftar akun
         val adapter = SimpleAdapter(
             requireContext(),
             accountDataList,
@@ -53,14 +44,12 @@ class ProfileFragment : Fragment() {
         )
         binding.listViewItems.adapter = adapter
 
-        // Logika Klik Item List
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
             val selectedItem = accountDataList[position]
             val title = selectedItem["title"]
             Toast.makeText(requireContext(), "Mengedit $title", Toast.LENGTH_SHORT).show()
         }
 
-        // Action Logout
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())

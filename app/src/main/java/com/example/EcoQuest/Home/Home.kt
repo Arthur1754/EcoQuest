@@ -34,10 +34,10 @@ class Home : Fragment() {
             startActivity(intent)
         }
 
-        binding.btnToEnam.setOnClickListener {
-            val intent = Intent(requireContext(), EnamActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.btnToEnam.setOnClickListener {
+//            val intent = Intent(requireContext(), EnamActivity::class.java)
+//            startActivity(intent)
+//        }
 
         binding.btnSnackBar.setOnClickListener {
             Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)

@@ -1,4 +1,4 @@
-package com.example.EcoQuest.Profile
+package com.example.EcoQuest
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,12 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 
-import com.example.EcoQuest.R
 import com.example.EcoQuest.Home.Home
 import com.example.EcoQuest.Quest.Quest
 import com.example.EcoQuest.Home.Fragment.Reward
-import com.example.EcoQuest.Home.Fragment.Profile
-
+import com.example.EcoQuest.Profile.ProfileFragment
 import com.example.EcoQuest.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -48,7 +46,7 @@ class BaseActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_profile -> {
-                    replaceFragment(Profile())
+                    replaceFragment(ProfileFragment())
                     true
                 }
                 else -> false
